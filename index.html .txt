@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punchnear | Emergency Tyre Services</title>
+
+<style>
+:root{--primary:#0056b3;--accent:#ffcc00}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{line-height:1.6}
+a{text-decoration:none}
+
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:1000}
+nav{max-width:1200px;margin:auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.8rem;font-weight:800;color:var(--primary)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+
+.lang-switch button{
+padding:6px 10px;border:none;border-radius:4px;cursor:pointer;font-weight:bold
+}
+.lang-switch button:hover{background:var(--accent)}
+
+.btn{background:var(--primary);color:#fff;padding:.7rem 1.3rem;border-radius:5px;font-weight:bold}
+
+.hero{
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1597762692025-b825442750e3');
+background-size:cover;
+color:#fff;text-align:center;padding:7rem 2rem
+}
+.hero h1{font-size:3rem;margin-bottom:1rem}
+.hero p{max-width:700px;margin:auto;margin-bottom:2rem}
+.highlight{color:var(--accent)}
+
+.section{padding:4rem 2rem;max-width:1200px;margin:auto}
+.section-title{text-align:center;margin-bottom:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem}
+.card{padding:2rem;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);text-align:center}
+
+footer{background:#222;color:#fff;text-align:center;padding:3rem 2rem}
+.phone{font-size:1.8rem;color:var(--accent)}
+
+.whatsapp{
+position:fixed;bottom:25px;right:25px;
+width:60px;height:60px;border-radius:50%;
+background:#25D366;color:#fff;
+display:flex;align-items:center;justify-content:center;
+font-size:32px;z-index:999
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">PUNCHNEAR</div>
+
+<div class="nav-right">
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('mr')">MR</button>
+<button onclick="setLang('hi')">HI</button>
+</div>
+<a href="#contact" class="btn" data-key="btn_help"></a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<h1 data-key="hero_title"></h1>
+<p data-key="hero_desc"></p>
+<a href="#contact" class="btn" style="background:var(--accent);color:#000" data-key="btn_now"></a>
+</section>
+
+<section class="section">
+<div class="section-title">
+<h2 data-key="services_title"></h2>
+</div>
+<div class="grid">
+<div class="card">
+<h3 data-key="srv1"></h3>
+<p data-key="srv1d"></p>
+</div>
+<div class="card">
+<h3 data-key="srv2"></h3>
+<p data-key="srv2d"></p>
+</div>
+<div class="card">
+<h3 data-key="srv3"></h3>
+<p data-key="srv3d"></p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section" style="background:#f9f9f9">
+<div class="section-title">
+<h2 data-key="contact_title"></h2>
+</div>
+
+<form action="https://formspree.io/f/abcdwxyz" method="POST"
+style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:10px">
+<input type="text" name="name" placeholder="Name" required style="width:100%;padding:10px;margin-bottom:1rem">
+<input type="tel" name="phone" placeholder="Mobile" required style="width:100%;padding:10px;margin-bottom:1rem">
+<textarea name="message" placeholder="Message" required style="width:100%;padding:10px;height:120px"></textarea>
+<button type="submit" class="btn" style="width:100%;margin-top:1rem">Send</button>
+</form>
+</section>
+
+<footer>
+<p data-key="footer_help"></p>
+<div class="phone">📞 8956064867</div>
+<p>&copy; 2025 Punchnear</p>
+</footer>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp" target="_blank"
+href="https://wa.me/918956064867?text=Hello Punchnear, I need emergency tyre service">💬</a>
+
+<script>
+const t={
+en:{
+hero_title:"15-Minute Emergency Tyre Services",
+hero_desc:"Stuck on the road? We reach you within 15 minutes across Maharashtra.",
+btn_help:"Contact Us",
+btn_now:"Get Help Now",
+services_title:"Our Services",
+srv1:"Puncture Repair",
+srv1d:"Fast and professional tyre puncture fixing.",
+srv2:"Tyre Replacement",
+srv2d:"Tube and tyre replacement on the spot.",
+srv3:"Emergency Air",
+srv3d:"Instant air filling service.",
+contact_title:"Contact Us",
+footer_help:"Need Emergency Help?"
+},
+mr:{
+hero_title:"१५ मिनिटांत आपत्कालीन टायर सेवा",
+hero_desc:"रस्त्यावर अडकलात? आम्ही महाराष्ट्रभर १५ मिनिटांत पोहोचतो.",
+btn_help:"संपर्क करा",
+btn_now:"आता मदत घ्या",
+services_title:"आमच्या सेवा",
+srv1:"पंक्चर दुरुस्ती",
+srv1d:"जलद आणि विश्वासार्ह टायर दुरुस्ती.",
+srv2:"टायर बदल",
+srv2d:"जागेवर ट्यूब व टायर बदल.",
+srv3:"आपत्कालीन हवा",
+srv3d:"तत्काळ हवा भरण्याची सेवा.",
+contact_title:"संपर्क करा",
+footer_help:"आपत्कालीन मदत हवी आहे का?"
+},
+hi:{
+hero_title:"15 मिनट में आपातकालीन टायर सेवा",
+hero_desc:"सड़क पर फँस गए? हम 15 मिनट में आपकी मदद करते हैं।",
+btn_help:"संपर्क करें",
+btn_now:"अभी मदद लें",
+services_title:"हमारी सेवाएँ",
+srv1:"पंक्चर मरम्मत",
+srv1d:"तेज़ और भरोसेमंद टायर मरम्मत।",
+srv2:"टायर बदलना",
+srv2d:"मौके पर ट्यूब और टायर बदल।",
+srv3:"आपातकालीन हवा",
+srv3d:"तुरंत हवा भरने की सेवा।",
+contact_title:"संपर्क करें",
+footer_help:"आपातकालीन सहायता चाहिए?"
+}
+};
+
+function setLang(l){
+document.querySelectorAll("[data-key]").forEach(e=>{
+e.innerText=t[l][e.dataset.key]
+});
+localStorage.setItem("lang",l)
+}
+setLang(localStorage.getItem("lang")||"en");
+</script>
+
+</body>
+</html>
